@@ -361,6 +361,7 @@ BUILDS are the circleci builds."
   (with-eval-after-load 'magit-mode
     (message "After load magit-mode")
     (define-key magit-mode-map (kbd "C-c C-a") #'magit-circleci--approve-workflow)
+    (magit-circleci-pull)
     magit-circleci-section-keybinding-map))
 
 (defun magit-circleci--deactivate ()
