@@ -70,13 +70,9 @@
   ;; CircleCI Token
   (getenv "CIRCLECI_TOKEN"))
 
-(defvar magit-circleci-organisation-name
-  ;; CircleCI Organisation name
-  (getenv "CIRCLECI_ORGANISATION_NAME"))
-
 (defvar magit-circleci--project-slug
   ;; CircleCI Project Slug
-  (concat "gh/" magit-circleci-organisation-name))
+  (concat "gh/" (getenv "CIRCLECI_ORGANISATION_NAME")))
 
 (defvar magit-circleci--cache nil) ;; Store cache data
 
